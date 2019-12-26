@@ -8,6 +8,9 @@
 정각이삼십
 사오십오(분)
 
+
+사용시에는 1분 또는 5분 간격으로 딜레이를 추가하고 allOff();
+
  */
 
 #include <Adafruit_NeoPixel.h>
@@ -33,6 +36,17 @@ void setup() {
 
 int hour[12][4]={{1,0},{0,1},{3,0},{4,0},{2,0,2,1},{1,1,2,1},{3,1,4,1},{1,1,1,2},{2,2,3,2},{0,0},{0,0,1,0},{0,0,0,1}};
 int minute[12][6]={{0,3,1,3},{3,4},{2,4},{2,4,3,4},{2,3,4,3},{2,3,2,4,3,4},{3,3,4,3},{3,3,2,4,3,4},{0,4,2,4},{0,4,2,4,3,4},{1,4,2,4},{1,4,2,4,3,4}};
+
+void allOff(){
+  for(int x=0; x<=4; x++){
+    strip.setPixelColor(x,0,0,0);
+    strip2.setPixelColor(x,0,0,0);
+    strip3.setPixelColor(x,0,0,0);
+    strip4.setPixelColor(x,0,0,0);
+    strip5.setPixelColor(x,0,0,0);
+  }
+}
+
 
 void showLED(int x, int y){
 
