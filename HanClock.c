@@ -87,6 +87,9 @@ void loop() {
   if(hour[HOUR-1][2]!=NULL){ 
     showLED(hour[HOUR-1][2],hour[HOUR-1][3]);
   }
+  if(HOUR==12){
+    showLED(0,1);
+  }
 
   //글자 '시' (항상 켜져있음)
   showLED(4,2);
