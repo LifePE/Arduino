@@ -107,5 +107,5 @@ void loop() {
   if(MINUTE!=0){
     showLED(4,4);
   }
-  
+  //allOff();
 }
